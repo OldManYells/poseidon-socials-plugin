@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>Poseidon-Plugin-Template</artifactId>
+    <artifactId>Poseidon-Socials-Plugin</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <description>A template for creating plugins for the Poseidon server software.</description>
+    <description>Socials plugin allows displaying social links in chat with /socials command</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

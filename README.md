@@ -1,35 +1,52 @@
-# Poseidon-Plugin-Template
+# Poseidon-Socials-Plugin
 
-This repository serves as a template to assist with creating plugins for Project Poseidon.
+This plugin allows defining a set of social links that players can request by
+running the `/socials` command.
 
-It includes examples of:
-- A configuration file.
-- A listener.
-- A command.
+## Settings
 
-## Steps to Use This Template
+The plugin creates `plugins/Poseidon-Socials-Plugin/config.yml` and supports
+the following keys:
 
-1. **Clone the Repository**
-    - Clone this repository to your local machine.
+- `config-version` (integer)
+- `links` (list of objects with `name` and `url`), as shown below
+- `settings.socialsplugin-command.enabled.value` (boolean)
+- `settings.socialsplugin-command.response.value` (string)
 
-2. **Modify `pom.xml`**
-    - Update the following fields to reflect your plugin:
-        - `name`
-        - `version`
-        - `description`
-    - **Note:** Removing `-SNAPSHOT` from the version will trigger the `release.yml` GitHub Action to create a GitHub release.
+Example:
 
-3. **Refactor Package Structure**
-    - Refactor the package `org.retromc.templateplugin` to a unique package name for your plugin to avoid conflicts.
+```yml
+config-version: 1
+links:
+  - name: "§2Website§r§f"
+    url: "https://retromc.org"
+  - name: "§6Wiki§r§f"
+    url: "https://wiki.retromc.org/"
+  - name: "§9Discord§r§f"
+    url: "https://discord.retromc.org/"
+settings:
+  socialsplugin-command:
+    enabled:
+      value: true
+    response:
+      value: "Test command response"
+```
 
-4. **Update `plugin.yml`**
-    - Update the `plugin.yml` file to match the refactored package name and plugin metadata.
+Notes:
 
-5. **Modify the Code**
-    - Customize the code as required for your plugin.
-    - **Important:**
-        - Remove the player greeting example in the listener.
-        - Remove the test command.
+- `name` supports Minecraft formatting codes (such as `§2`, `§6`, `§9`).
+- Entries missing `name`/`url`, or with empty values, are ignored.
+- If no valid entries exist, `/socials` will return `No social links are configured.`
+- `settings.socialsplugin-command.*` is read by `SocialsLinksCommand` for its enabled
+  flag and response text.
+
+## Command
+
+- `/socials` (alias: `/social`) shows all configured links.
+
+Permission:
+
+- `myplugin.socials` (ops are also allowed)
 
 ## GitHub Actions
 

@@ -1,22 +1,23 @@
 name: ${project.name}
 description: ${project.description}
-main: org.retromc.templateplugin.TemplatePlugin
+main: org.retromc.socials.SocialsPlugin
 version: ${project.version}
 authors:
-  - JohnyMuffin
+  - OldManYells
 softdepend:
   - Essentials
 
 commands:
-  testcommand:
-    description: A test command for the plugin.
-    usage: /<command> [args]
-    aliases: [tc]
-    permission: myplugin.testcommand
-    permission-message: You do not have permission to use this command.
+  socials:
+    description: Show configured social links.
+    usage: /<command>
+    aliases: [social]
 
-permissions:
-  myplugin.*:
-    description: Gives access to all myplugin commands.
-    children:
-      myplugin.testcommand: true
+
+links:
+  -   name: §2Site§r§f
+      url: https://retromc.org
+  -   name: §6Wiki§r§f
+      url: https://wiki.retromc.org/
+  -   name: §9Discord§r§f
+      url: https://discord_invite
