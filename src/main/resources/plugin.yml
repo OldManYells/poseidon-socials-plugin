@@ -20,9 +20,9 @@ permissions:
 
 
 links:
-  -   name: §2Site§r§f
-      url: https://retromc.org
-  -   name: §6Wiki§r§f
-      url: https://wiki.retromc.org/
-  -   name: §9Discord§r§f
-      url: https://discord_invite
+  - name: "§2Website§r§f"
+    url: "https://retromc.org"
+  - name: "§6Wiki§r§f"
+    url: "https://wiki.retromc.org/"
+  - name: "§9Discord§r§f"
+    url: "https://discord.retromc.org/"
