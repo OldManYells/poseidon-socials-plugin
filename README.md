@@ -48,6 +48,10 @@ Permission:
 
 - `poseidon.socials` (ops are also allowed)
 
+## Screenshot
+
+![Socials command screenshot](screenshots/screenshot.png)
+
 ## GitHub Actions
 
 This repository includes a pre-configured GitHub Action:
