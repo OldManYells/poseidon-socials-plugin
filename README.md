@@ -46,7 +46,7 @@ Notes:
 
 Permission:
 
-- `myplugin.socials` (ops are also allowed)
+- `poseidon.socials` (ops are also allowed)
 
 ## GitHub Actions
 

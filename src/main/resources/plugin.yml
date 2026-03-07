@@ -13,6 +13,11 @@ commands:
     usage: /<command>
     aliases: [social]
 
+permissions:
+  poseidon.socials:
+    description: Allows using /socials.
+    default: op
+
 
 links:
   -   name: §2Site§r§f

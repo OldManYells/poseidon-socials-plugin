@@ -23,7 +23,7 @@ public class SocialsCommand implements CommandExecutor {
       return true;
     }
 
-    if (!sender.hasPermission("myplugin.socials") && !sender.isOp()) {
+    if (!sender.hasPermission("poseidon.socials") && !sender.isOp()) {
       sender.sendMessage("You do not have permission to execute this command.");
       return true;
     }
