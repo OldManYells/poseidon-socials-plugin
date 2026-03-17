@@ -66,7 +66,7 @@ public class SocialsConfig extends Configuration {
     defaultLinks.add(wikiLink);
 
     Map<String, String> discordLink = new LinkedHashMap<String, String>();
-    discordLink.put("name", "§§9Discord§r§f§r§f");
+    discordLink.put("name", "§9Discord§r§f");
     discordLink.put("url", "https://discord.retromc.org/");
     defaultLinks.add(discordLink);
 
